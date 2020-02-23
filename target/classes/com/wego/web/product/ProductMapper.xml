@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.wego.web.product.ProductMapper">
+  
+  <select id="createProduct" parameterType="hashmap">
+  ${CREATE_PRODUCT}
+  </select>
+    <select id="dropProduct" parameterType="hashmap">
+  ${DROP_PRODUCT}
+  </select>
+  
+ 	<insert id="insertProduct" parameterType="hashmap">
+ 	insert into product(pdtname, hid, price, hosttype, type, odnum, redate, paytype, cancel, uid) values(
+ 		#{pdtname},#{hid},#{price},#{hosttype},#{type},#{odnum},#{redate},#{paytype},#{cancel},#{uid})
+ 	</insert>
+  </mapper>
+  
+  
